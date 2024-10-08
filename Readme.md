@@ -6,6 +6,9 @@ This project aims to create a web-based database system for hotpot restaurants i
 * Front-end: HTML, CSS
 * Back-end: Python (Flask)
 * Database: SQLite
+
+## Data Source
+Restaurant data is collected from the Google Maps API, including name, rating, dining options, address, coordinates, business hours, and reviews.
   
 ![Architecture](https://github.com/user-attachments/assets/68f5820a-4a74-42e2-aae3-9aad59b0e676)
 
@@ -29,32 +32,30 @@ This project aims to create a web-based database system for hotpot restaurants i
 * Update existing restaurant information (review count and average rating)
 * Delete restaurant information (for closed businesses)
 
+## Project Structure
 
+* [documents/Scraper](./documents/Scraper): Google Maps data scraping scripts
+* [documents/json2sql](./documents/json2sql): Database schema construction and data import scripts
+* [codes](./codes): Web frontend and backend code
 
-
-## 描述
-- 從Google爬取的資料放在documents/Scarper。</br>
-- 建構火鍋Schema和將Google爬取的資料匯入到database裡的程式碼放在documents/json2sql。</br>
-- 網頁前端程式碼放在codes。</br>
-
-## 示範
-網頁內容請直接跑在codes/final底下的main.py
-
-### **執行方式** 
+## Setup and Usage
+1. Clone the repository
+2. Run the application:
 ```
-cd codes/final
-python main.py
+$ cd codes/final && python main.py
 ```
-### **執行結果**
+Open a web browser and navigate to http://localhost:5000
 
-**主頁面**
+### **Result**
+
+**Home Page**
 <img src="./figure/main.jpg" width = "1000" height = "500" div align=center />
 
 
-**搜尋結果**
+**Searching Result**
 <img src="./figure/query.png" width = "1000" height = "700" div align=center />
 
 
-**地圖顯示**
+**Map Display**
 <img src="./figure/map.jpg" width = "1000" height = "600" div align=center />
 
